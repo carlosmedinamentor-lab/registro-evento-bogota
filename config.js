@@ -1,9 +1,17 @@
+// ============================================================
 // Config pública de la landing.
-// SUPABASE_URL y SUPABASE_ANON_KEY son públicos por diseño (van al navegador en cualquier app Supabase);
-// la seguridad la da la policy RLS (INSERT permitido a rol anon, SELECT bloqueado).
-// WEBHOOK_URL: cuando tengas la URL del webhook de n8n, pégala acá y hacé commit. No hace falta redeploy manual.
+//
+// ⚠️ ANTES DE IR A PRODUCCIÓN:
+//   1. Poné SUPABASE_URL y SUPABASE_ANON_KEY del proyecto donde corriste
+//      el DDL de registros_evento_bogota.sql. Son públicos por diseño
+//      (van al navegador en cualquier app Supabase). La seguridad la da
+//      la policy RLS (INSERT permitido a rol anon, SELECT bloqueado).
+//   2. Opcional: cuando tengas la URL del webhook de n8n, pegala en
+//      WEBHOOK_URL. Empty = webhook desactivado (form igual funciona).
+//   3. git commit + push. GitHub Pages redeploya en <2min.
+// ============================================================
 window.__REGISTRO_CONFIG__ = {
-  SUPABASE_URL: 'https://fjrventlhrdpapsqyiac.supabase.co',
-  SUPABASE_ANON_KEY: 'sb_publishable_bzZ70mImvFJU-2OStuFKSw_WvhtbBwT',
+  SUPABASE_URL: '',
+  SUPABASE_ANON_KEY: '',
   WEBHOOK_URL: ''
 };
