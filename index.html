@@ -657,6 +657,8 @@
         utm_medium: data.utm_medium,
         utm_campaign: data.utm_campaign,
         user_agent: (navigator.userAgent || '').slice(0, 300),
+        referrer: (document.referrer || '').slice(0, 500) || null,
+        pagina: location.href.slice(0, 500),
       };
 
       try {
