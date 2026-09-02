@@ -129,11 +129,8 @@
       font-size:14px; color:var(--tinta);
       max-width:520px; margin:0 auto 36px;
       font-weight:400;
-      padding-top:18px;
-      border-top:1px solid var(--linea);
       display:inline-block;
     }
-    .reaseguro strong{ color:var(--carbon); font-weight:500; }
     .cta{
       display:inline-flex; align-items:center; gap:12px;
       background:var(--oro); color:var(--crema);
@@ -164,14 +161,13 @@
     }
     .datos-grid{
       max-width:960px; margin:0 auto;
-      display:flex; gap:32px; align-items:center; justify-content:center;
+      display:flex; gap:14px; align-items:center; justify-content:center;
       flex-wrap:wrap;
       color:var(--carbon-suave);
       font-size:14px;
+      font-weight:400;
     }
-    .dato{ display:flex; align-items:center; gap:10px; }
-    .dato svg{ flex-shrink:0; stroke:var(--oro); }
-    .dato strong{ color:var(--carbon); font-weight:500; }
+    .datos-grid .sep{ color:var(--oro); opacity:.7; }
 
     /* --- SECCIONES --- */
     section{ padding:88px 0; }
@@ -192,18 +188,8 @@
     }
     .prose p + p{ margin-top:1.1em }
 
-    /* --- REENCUADRE --- */
-    .reencuadre{ text-align:center; }
-    .reencuadre h2{
-      max-width:800px; margin:0 auto 24px;
-    }
-    .reencuadre .prose{ max-width:640px; margin:0 auto; }
-    .separador{
-      width:40px; height:1px; background:var(--oro);
-      margin:0 auto 40px; opacity:.6;
-    }
-
     /* --- DESCUBRIMIENTOS --- */
+    .descubrimientos h2{ margin-bottom:0; }
     .descubrimientos ol{
       list-style:none; padding:0; margin:32px 0 0;
       display:flex; flex-direction:column; gap:0;
@@ -227,19 +213,6 @@
       font-style:italic;
     }
 
-    /* --- PARA QUIEN --- */
-    .para-quien{ background:var(--blanco); }
-    .cols{
-      display:grid; grid-template-columns:1fr 1fr; gap:64px;
-      margin-top:32px;
-    }
-    .col h3{
-      font-size:22px; margin:0 0 16px; color:var(--carbon);
-      font-weight:500;
-      padding-bottom:12px; border-bottom:1px solid var(--linea);
-    }
-    .col p{ margin:0; color:var(--carbon-suave); font-weight:300; font-size:16px; line-height:1.65; }
-
     /* --- CARLOS --- */
     .carlos{
       display:grid; grid-template-columns:340px 1fr; gap:56px; align-items:center;
@@ -254,20 +227,11 @@
     .carlos h2{ margin-top:0 }
     .carlos .nombre{
       font-family:'Cormorant Garamond', serif;
-      font-size:28px; color:var(--carbon); font-weight:500;
-      margin:0 0 4px;
+      font-size:32px; color:var(--carbon); font-weight:500;
+      margin:0 0 22px;
     }
-    .carlos .rol{
-      font-family:'Outfit', sans-serif; font-size:12px;
-      letter-spacing:.24em; text-transform:uppercase;
-      color:var(--oro); margin:0 0 22px;
-    }
-    .carlos .bio{ color:var(--carbon-suave); font-weight:300; font-size:17px; line-height:1.7; margin:0 0 24px; }
-    .firma{
-      font-family:'Cormorant Garamond', serif;
-      font-style:italic; font-size:26px; color:var(--oro);
-      margin:0;
-    }
+    .carlos .bio{ color:var(--carbon-suave); font-weight:300; font-size:17px; line-height:1.7; margin:0 0 16px; }
+    .carlos .bio:last-child{ margin-bottom:0; }
 
     /* --- FORMULARIO --- */
     .form-wrap{
@@ -355,32 +319,27 @@
     .success .kicker{ margin-top:0; margin-bottom:16px; }
 
     /* --- CIERRE --- */
-    .cierre{ text-align:center; padding:96px 24px; }
-    .cierre h2{ margin-bottom:32px; max-width:640px; margin-left:auto; margin-right:auto; }
-    .cierre .datos-inline{
-      display:flex; gap:24px; justify-content:center; flex-wrap:wrap;
-      margin:32px 0 40px; color:var(--carbon-suave); font-size:14px;
-    }
-    .cierre .datos-inline span{ display:inline-flex; align-items:center; gap:8px; }
-    .cierre .datos-inline strong{ color:var(--carbon); font-weight:500; }
+    .cierre{ text-align:center; padding:120px 24px; }
+    .cierre h2{ margin-bottom:40px; max-width:640px; margin-left:auto; margin-right:auto; }
 
     /* --- FOOTER --- */
     footer{
       border-top:1px solid var(--linea-fina);
-      padding:40px 24px;
+      padding:56px 24px;
       text-align:center;
-      color:var(--tinta);
-      font-size:12px;
-      letter-spacing:.14em;
-      text-transform:uppercase;
     }
-    footer .fsello{ width:36px; height:36px; margin:0 auto 14px; opacity:.85; }
+    footer .wordmark{
+      font-family:'Cormorant Garamond', serif;
+      font-weight:500;
+      font-size:18px;
+      letter-spacing:.32em;
+      color:var(--oro);
+    }
     footer .cita{
       font-family:'Cormorant Garamond', serif;
       font-style:italic; font-size:16px;
-      text-transform:none; letter-spacing:0;
       color:var(--carbon-suave);
-      margin:12px auto 0; max-width:420px;
+      margin:16px auto 0; max-width:420px;
     }
 
     /* --- MOTION --- */
@@ -397,11 +356,10 @@
       .hero .sello{ width:72px; height:72px; margin-bottom:22px; }
       section{ padding:64px 0; }
       section.tight{ padding:48px 0; }
-      .cols{ grid-template-columns:1fr; gap:36px; }
       .carlos{ grid-template-columns:1fr; gap:32px; text-align:center; }
       .carlos .foto{ max-width:260px; margin:0 auto; }
-      .carlos .rol{ margin-bottom:18px; }
-      .datos-grid{ flex-direction:column; gap:16px; text-align:center; }
+      .datos-grid{ flex-direction:column; gap:8px; text-align:center; }
+      .datos-grid .sep{ display:none; }
       .form-inner{ padding:64px 20px; }
       .descubrimientos li{ gap:16px; padding:22px 0; }
       .num{ min-width:36px; }
@@ -417,48 +375,29 @@
   <img class="sello" src="./logo-sello.webp" alt="5.000 Millas" width="88" height="88" fetchpriority="high">
   <p class="eyebrow">Evento presencial · Gratuito · Bogotá</p>
   <h1>IA: De Cero<br>a <em>Ingresos</em></h1>
-  <p class="lead">Descubre cómo convertir la Inteligencia Artificial en tu primera fuente de ingresos y sal con tu plan de negocio empezado.</p>
-  <span class="reaseguro"><strong>Sin experiencia previa.</strong> Este taller empieza exactamente en cero.</span>
+  <p class="lead">Convierte la inteligencia artificial en tu primera fuente de ingresos. Sales con tu plan empezado.</p>
+  <span class="reaseguro">Sin experiencia previa. Empiezas en cero.</span>
   <div style="margin-top:8px;">
     <a href="#formulario" class="cta">Reserva tu cupo <span class="arrow" aria-hidden="true">→</span></a>
-    <span class="microcopy">50 cupos presenciales. Sin costo.</span>
+    <span class="microcopy">50 cupos. Sin costo.</span>
   </div>
 </header>
 
 <!-- BARRA DATOS EVENTO -->
 <div class="datos">
   <div class="datos-grid">
-    <div class="dato">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
-      <span><strong>Sábado 5 de septiembre</strong></span>
-    </div>
-    <div class="dato">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-      <span>8:00 a. m. – 12:00 m.</span>
-    </div>
-    <div class="dato">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.5" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
-      <span>Cámara de Comercio de Bogotá — Fontibón</span>
-    </div>
+    <span>Sábado 5 de septiembre</span>
+    <span class="sep" aria-hidden="true">·</span>
+    <span>8:00 a. m. – 12:00 m.</span>
+    <span class="sep" aria-hidden="true">·</span>
+    <span>Cámara de Comercio de Bogotá, Fontibón</span>
   </div>
 </div>
-
-<!-- REENCUADRE -->
-<section class="reencuadre">
-  <div class="wrap-narrow reveal">
-    <div class="separador"></div>
-    <h2>No vienes a escuchar.<br>Vienes a construir.</h2>
-    <div class="prose">
-      <p>No es una conferencia. Traes tu computador y sales con tu primera oportunidad de negocio identificada y tus primeros pasos definidos. Manos a la obra, en vivo.</p>
-    </div>
-  </div>
-</section>
 
 <!-- DESCUBRIMIENTOS -->
 <section class="descubrimientos">
   <div class="wrap reveal">
-    <p class="kicker">En esta experiencia descubrirás</p>
-    <h2>Cinco cosas que te llevas puestas.</h2>
+    <h2>En esta experiencia descubrirás:</h2>
     <ol>
       <li><span class="num">01</span><span>Cómo usar la IA para encontrar nuevas oportunidades de negocio.</span></li>
       <li><span class="num">02</span><span>Cómo convertir una idea en una posible fuente de ingresos.</span></li>
@@ -466,24 +405,6 @@
       <li><span class="num">04</span><span>Cómo usar IA para conseguir clientes, aumentar ventas y hacer crecer un negocio.</span></li>
       <li><span class="num">05</span><span>Qué pasos seguir para pasar de la idea a la acción.</span></li>
     </ol>
-  </div>
-</section>
-
-<!-- PARA QUIEN -->
-<section class="para-quien">
-  <div class="wrap reveal">
-    <p class="kicker" style="text-align:center;">Filtro honesto</p>
-    <h2 style="text-align:center;">¿Para quién es este taller?</h2>
-    <div class="cols">
-      <div class="col">
-        <h3>Es para ti si…</h3>
-        <p>Quieres una nueva fuente de ingresos, tienes una idea pero no sabes por dónde empezar, quieres aprender a usar IA para crear o hacer crecer un negocio, o quieres claridad sobre qué proyecto desarrollar.</p>
-      </div>
-      <div class="col">
-        <h3>No es para ti si…</h3>
-        <p>Buscas una fórmula mágica sin trabajo, o no piensas traer tu computador y participar. Este taller pide manos.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -496,15 +417,14 @@
           src="./carlos-medina.jpg"
           srcset="./carlos-medina-mobile.jpg 500w, ./carlos-medina.jpg 900w"
           sizes="(max-width: 720px) 260px, 340px"
-          alt="Carlos Medina, CEO y Founder de 5.000 Millas"
+          alt="Carlos Medina"
           loading="lazy"
           width="340" height="425">
       </div>
       <div>
         <p class="nombre">Carlos Medina</p>
-        <p class="rol">CEO &amp; Founder · 5.000 Millas</p>
-        <p class="bio">Escritor, autor de 11 libros. Ayuda a personas y empresas a convertir su experiencia en activos de alto valor. En este taller no habla de teoría: te sienta frente a tu computador y te muestra cómo se hace.</p>
-        <p class="firma">Carlos Medina</p>
+        <p class="bio">Conferencista internacional. Autor de doce libros sobre transformación personal y profesional.</p>
+        <p class="bio">En más de siete años ha acompañado a decenas de personas a transformar su vida y su trabajo. Este taller es gratuito: cree que el punto de partida no debería costarle a nadie.</p>
       </div>
     </div>
   </div>
@@ -514,8 +434,8 @@
 <section id="formulario" class="form-wrap" style="padding:0;">
   <div class="form-inner reveal">
     <div id="form-view">
-      <h2>Reserva tu cupo gratuito</h2>
-      <p class="sub">Inscríbete ahora y asegura tu lugar. Cupos limitados.</p>
+      <h2>Reserva tu cupo</h2>
+      <p class="sub">50 cupos. Sin costo.</p>
 
       <form id="registro-form" novalidate autocomplete="on">
         <div class="form-error" id="form-error" role="alert"></div>
@@ -561,7 +481,7 @@
           <input type="text" id="empresa_web" name="empresa_web" tabindex="-1" autocomplete="off">
         </div>
 
-        <button type="submit" class="submit" id="submit-btn">Confirmar mi cupo</button>
+        <button type="submit" class="submit" id="submit-btn">Reserva tu cupo</button>
         <p class="form-nota">Tus datos se guardan solo para confirmarte el cupo y enviarte los detalles.</p>
       </form>
     </div>
@@ -570,9 +490,8 @@
       <div class="check">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B7355" stroke-width="1.5" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
       </div>
-      <p class="kicker">Cupo confirmado</p>
       <h3>Tu lugar está reservado.</h3>
-      <p>Te escribiremos por WhatsApp con los detalles del evento y las instrucciones para el sábado.</p>
+      <p>Te escribiremos por WhatsApp con los detalles del evento.</p>
       <p style="margin-top:24px; font-size:14px; color:var(--tinta);">Nos vemos el sábado 5 de septiembre.</p>
     </div>
   </div>
@@ -580,22 +499,13 @@
 
 <!-- CIERRE -->
 <section class="cierre reveal">
-  <p class="kicker">50 cupos. Cuando se llenen, cierra el registro.</p>
-  <h2>Empieza en cero. Sal con un plan.</h2>
-  <div class="datos-inline">
-    <span><strong>Sáb. 5 de septiembre</strong></span>
-    <span>·</span>
-    <span>8:00 a. m. – 12:00 m.</span>
-    <span>·</span>
-    <span>Cámara de Comercio de Bogotá — Fontibón</span>
-  </div>
+  <h2>50 cupos. Cuando se llenen, se cierra el registro.</h2>
   <a href="#formulario" class="cta">Reserva tu cupo <span class="arrow" aria-hidden="true">→</span></a>
 </section>
 
 <footer>
-  <img class="fsello" src="./logo-sello.webp" alt="" loading="lazy">
-  <div>5000MILLAS.COM</div>
-  <p class="cita">«Vidas, empresas y obras de alto valor.»</p>
+  <div class="wordmark">5000 MILLAS</div>
+  <p class="cita">«Vidas, obras y empresas de alto valor.»</p>
 </footer>
 
 <script src="./config.js"></script>
