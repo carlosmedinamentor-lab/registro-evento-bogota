@@ -12,6 +12,6 @@
 // ============================================================
 window.__REGISTRO_CONFIG__ = {
   SUPABASE_URL: 'https://hvtmujeeaxoskntkkldm.supabase.co',
-  SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2dG11amVlYXhvc2tudGtrbGRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgzMTQ5ODYsImV4cCI6MjEwMzg5MDk4Nn0.shH2tx3FEt9G-lnrCLF60gb8fwbeV3UA_bPB55yhzA0',
+  SUPABASE_ANON_KEY: 'sb_publishable_iektZlY-NwbWGUt2bD1yaQ_UlxdVDqK',
   WEBHOOK_URL: ''
 };
