@@ -101,7 +101,7 @@
       padding:56px 24px 40px;
       text-align:center;
     }
-    .hero .sello{ width:88px; height:88px; margin:0 auto 28px; object-fit:contain; }
+    .hero .sello{ width:112px; height:112px; margin:0 auto 24px; object-fit:contain; display:block; }
     .eyebrow{
       font-family:'Outfit', sans-serif;
       font-weight:500;
@@ -342,6 +342,33 @@
       margin:16px auto 0; max-width:420px;
     }
 
+    /* --- WHATSAPP FLOATING --- */
+    .wa-float{
+      position:fixed;
+      right:22px; bottom:22px;
+      width:56px; height:56px;
+      border-radius:50%;
+      background:var(--oro);
+      color:var(--crema);
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 8px 24px rgba(26,26,26,.18), 0 2px 6px rgba(26,26,26,.10);
+      transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+      z-index:80;
+      text-decoration:none;
+    }
+    .wa-float:hover{
+      background:var(--oro-oscuro);
+      transform:translateY(-2px);
+      box-shadow:0 12px 28px rgba(26,26,26,.22), 0 3px 8px rgba(26,26,26,.12);
+    }
+    .wa-float:focus-visible{ outline:2px solid var(--carbon); outline-offset:3px; }
+    .wa-float svg{ width:28px; height:28px; display:block; }
+    .wa-float.dim{ opacity:0; pointer-events:none; transform:translateY(12px); }
+    @media (max-width:720px){
+      .wa-float{ right:16px; bottom:16px; width:52px; height:52px; }
+      .wa-float svg{ width:26px; height:26px; }
+    }
+
     /* --- MOTION --- */
     .reveal{ opacity:0; transform:translateY(14px); transition:opacity .8s ease, transform .8s ease; }
     .reveal.in{ opacity:1; transform:none; }
@@ -353,7 +380,7 @@
     /* --- MOBILE --- */
     @media (max-width: 720px){
       .hero{ padding:44px 20px 32px; min-height:auto; }
-      .hero .sello{ width:72px; height:72px; margin-bottom:22px; }
+      .hero .sello{ width:92px; height:92px; margin-bottom:20px; }
       section{ padding:64px 0; }
       section.tight{ padding:48px 0; }
       .carlos{ grid-template-columns:1fr; gap:32px; text-align:center; }
@@ -372,7 +399,7 @@
 
 <!-- HERO -->
 <header class="hero">
-  <img class="sello" src="./logo-sello.webp" alt="5.000 Millas" width="88" height="88" fetchpriority="high">
+  <img class="sello" src="./logo-sello.webp" alt="5.000 Millas" width="112" height="112" fetchpriority="high">
   <p class="eyebrow">Evento presencial · Gratuito · Bogotá</p>
   <h1>IA: De Cero<br>a <em>Ingresos</em></h1>
   <p class="lead">Convierte la inteligencia artificial en tu primera fuente de ingresos. Sales con tu plan empezado.</p>
@@ -508,6 +535,16 @@
   <p class="cita">«Vidas, obras y empresas de alto valor.»</p>
 </footer>
 
+<!-- WhatsApp flotante -->
+<a class="wa-float"
+   href="https://wa.me/34631625721?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20evento%20%C2%ABIA%3A%20De%20Cero%20a%20Ingresos%C2%BB."
+   target="_blank" rel="noopener"
+   aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <path d="M16.02 3C9.4 3 4.03 8.37 4.03 15c0 2.36.68 4.55 1.86 6.4L4 29l7.8-1.85A11.94 11.94 0 0 0 16.02 27C22.64 27 28 21.63 28 15S22.64 3 16.02 3zm0 21.6c-1.9 0-3.68-.5-5.22-1.4l-.37-.22-4.63 1.1 1.11-4.5-.24-.38A9.6 9.6 0 0 1 6.42 15c0-5.3 4.3-9.6 9.6-9.6s9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6zm5.53-7.18c-.3-.15-1.8-.9-2.08-1-.28-.1-.48-.15-.68.15s-.78 1-.96 1.2c-.18.2-.36.22-.66.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.78-1.68-2.08-.18-.3-.02-.46.13-.61.13-.13.3-.36.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53s-.68-1.64-.93-2.24c-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38s-1.05 1.02-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.55.72.3 1.28.5 1.72.64.72.23 1.37.2 1.9.12.58-.09 1.8-.74 2.05-1.45.25-.72.25-1.34.18-1.46-.08-.13-.28-.2-.58-.35z"/>
+  </svg>
+</a>
+
 <script src="./config.js"></script>
 <script>
   // Reveal on scroll
@@ -522,6 +559,17 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  })();
+
+  // Ocultar WhatsApp flotante cuando el botón de enviar está visible (para no taparlo)
+  (function(){
+    const wa = document.querySelector('.wa-float');
+    const submit = document.getElementById('submit-btn');
+    if (!wa || !submit || !('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => wa.classList.toggle('dim', e.isIntersecting));
+    }, { threshold: 0.1 });
+    io.observe(submit);
   })();
 
   // UTM capture
@@ -612,20 +660,23 @@
       };
 
       try {
-        const url = SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/registros_evento_bogota?on_conflict=correo';
+        const url = SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/registros_evento_bogota';
         const res = await fetch(url, {
           method: 'POST',
           headers: {
             'apikey': SUPABASE_ANON_KEY,
             'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
             'Content-Type': 'application/json',
-            'Prefer': 'resolution=merge-duplicates,return=minimal',
+            'Prefer': 'return=minimal',
           },
           body: JSON.stringify(row),
         });
 
-        if (!res.ok) {
-          const txt = await res.text().catch(() => '');
+        const txt = res.status === 201 ? '' : await res.text().catch(() => '');
+        // Duplicado por índice único en lower(correo) → tratamos como éxito (ya inscrito).
+        const yaInscrito = res.status === 409 || (res.status === 400 && /duplicate key|23505/i.test(txt));
+
+        if (res.status !== 201 && !yaInscrito) {
           console.error('Supabase error', res.status, txt);
           throw new Error('No pudimos guardar tu cupo. Intenta en unos segundos o escríbenos por WhatsApp.');
         }
