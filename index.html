@@ -277,13 +277,13 @@
 
     .cuaderno-img{
       position:relative;
-      filter: drop-shadow(-14px 18px 26px rgba(60,45,30,.22)) drop-shadow(0 2px 4px rgba(60,45,30,.14));
+      /* Sombra cálida sepia — sin recuadro, la transparencia del PNG deja ver el pergamino */
+      filter:
+        drop-shadow(-16px 22px 32px rgba(72,50,28,.24))
+        drop-shadow(0 3px 6px rgba(72,50,28,.16));
     }
     .cuaderno-img img{
       width:100%; height:auto;
-      /* Fundido inferior contra pergamino, muy suave */
-      -webkit-mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
-      mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
     }
 
     /* ========= BARRA DE DATOS ========= */
@@ -502,8 +502,10 @@
       padding: 100px 24px 110px;
     }
     .cierre .cuaderno-mini{
-      width:120px; margin:0 auto 30px;
-      filter: drop-shadow(-8px 12px 20px rgba(60,45,30,.20));
+      width:140px; margin:0 auto 30px;
+      filter:
+        drop-shadow(-10px 14px 22px rgba(72,50,28,.22))
+        drop-shadow(0 2px 4px rgba(72,50,28,.14));
     }
     .cierre h2{
       font-family:'Cormorant Garamond', serif;
@@ -680,9 +682,9 @@
       </div>
       <div class="cuaderno-img">
         <img
-          src="./public/registro-evento/cuaderno.png"
+          src="./public/registro-evento/cuaderno.webp"
           alt="Cuaderno de trabajo: De Cero a Ingresos con IA"
-          loading="eager" width="232" height="570">
+          loading="eager" width="640" height="1084">
       </div>
     </div>
   </div>
@@ -806,7 +808,7 @@
 
 <!-- ============ CIERRE ============ -->
 <section class="cierre reveal">
-  <img class="cuaderno-mini" src="./public/registro-evento/cuaderno.png" alt="" loading="lazy">
+  <img class="cuaderno-mini" src="./public/registro-evento/cuaderno.webp" alt="" loading="lazy" width="640" height="1084">
   <h2>Reserva tu cupo y reclama tu <span class="oro">Cuaderno de Trabajo.</span></h2>
   <p class="escasez">Quedan 30 cupos · Cuando se llenen, se cierra el registro</p>
   <a href="#formulario" class="cta-oro">Confirmar mi cupo <span class="arrow" aria-hidden="true">→</span></a>
