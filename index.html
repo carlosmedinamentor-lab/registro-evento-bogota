@@ -305,6 +305,14 @@
     .datos-inner .sep{
       color:var(--oro); font-size:10px;
     }
+    .datos-inner .direccion{
+      /* Dirección larga: tracking un pelo más apretado, wrap natural sin cortar */
+      letter-spacing:.14em;
+      text-align:center;
+      max-width:100%;
+      overflow-wrap:normal;
+      word-break:normal;
+    }
 
     /* ========= DESCUBRIMIENTOS ========= */
     section{ padding: 96px 0; }
@@ -629,6 +637,7 @@
       .descubrimientos li{ grid-template-columns: 48px 1fr; gap:16px; padding:22px 0; }
       .datos-inner .sep{ display:none; }
       .datos-inner{ flex-direction:column; gap:6px; font-size:12px; }
+      .datos-inner .direccion{ font-size:11px; letter-spacing:.10em; line-height:1.5; }
     }
     @media (max-width: 480px){
       .hero-content{ padding: 8px 20px 48px; }
@@ -697,7 +706,7 @@
     <span class="sep" aria-hidden="true">◆</span>
     <span>8:00 a. m. – 12:00 m.</span>
     <span class="sep" aria-hidden="true">◆</span>
-    <span>Cámara de Comercio de Bogotá, Fontibón</span>
+    <span class="direccion">Cámara de Comercio de Bogotá — Av. El Dorado No. 68D-35, Fontibón, Bogotá</span>
   </div>
 </div>
 
