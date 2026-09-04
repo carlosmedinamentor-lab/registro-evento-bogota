@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="./retrato-hero.webp" imagesrcset="./retrato-hero-mobile.webp 720w, ./retrato-hero.webp 1200w" imagesizes="(max-width: 860px) 100vw, 50vw">
+  <link rel="preload" as="image" href="./public/registro-evento/retrato.png">
 
   <script type="application/ld+json">
   {
@@ -150,16 +150,10 @@
       width:100%;
       height:100%;
       object-fit:cover;
-      object-position: 60% top;
-      /* Fundido con el pergamino: derecha e inferior a transparente */
-      -webkit-mask-image:
-        linear-gradient(to right, #000 55%, transparent 100%),
-        linear-gradient(to bottom, #000 78%, transparent 100%);
-      mask-image:
-        linear-gradient(to right, #000 55%, transparent 100%),
-        linear-gradient(to bottom, #000 78%, transparent 100%);
-      -webkit-mask-composite: source-in;
-      mask-composite: intersect;
+      object-position: center top;
+      /* PNG ya trae alpha real; fundido suave abajo para bleed contra pergamino */
+      -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
     }
 
     .hero-content{
@@ -646,11 +640,9 @@
 <header class="hero">
   <div class="hero-portrait">
     <img
-      src="./retrato-hero.webp"
-      srcset="./retrato-hero-mobile.webp 720w, ./retrato-hero.webp 1200w"
-      sizes="(max-width: 860px) 100vw, 46vw"
+      src="./public/registro-evento/retrato.png"
       alt="Carlos Medina"
-      fetchpriority="high" width="1200" height="2887">
+      fetchpriority="high" width="560" height="1284">
   </div>
 
   <div class="hero-content">
@@ -688,11 +680,9 @@
       </div>
       <div class="cuaderno-img">
         <img
-          src="./cuaderno.webp"
-          srcset="./cuaderno-mobile.webp 600w, ./cuaderno.webp 900w"
-          sizes="(max-width: 860px) 280px, 320px"
+          src="./public/registro-evento/cuaderno.png"
           alt="Cuaderno de trabajo: De Cero a Ingresos con IA"
-          loading="eager" width="900" height="1107">
+          loading="eager" width="232" height="570">
       </div>
     </div>
   </div>
@@ -816,7 +806,7 @@
 
 <!-- ============ CIERRE ============ -->
 <section class="cierre reveal">
-  <img class="cuaderno-mini" src="./cuaderno-mobile.webp" alt="" loading="lazy">
+  <img class="cuaderno-mini" src="./public/registro-evento/cuaderno.png" alt="" loading="lazy">
   <h2>Reserva tu cupo y reclama tu <span class="oro">Cuaderno de Trabajo.</span></h2>
   <p class="escasez">Quedan 30 cupos · Cuando se llenen, se cierra el registro</p>
   <a href="#formulario" class="cta-oro">Confirmar mi cupo <span class="arrow" aria-hidden="true">→</span></a>
