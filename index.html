@@ -3,37 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#F5F1E8">
-  <title>IA: De Cero a Ingresos · Evento presencial gratuito en Bogotá</title>
-  <meta name="description" content="Sábado 5 de septiembre en la Cámara de Comercio de Bogotá. Un taller presencial para convertir la Inteligencia Artificial en tu primera fuente de ingresos. Empieza en cero. 50 cupos.">
+  <meta name="theme-color" content="#E0D7CC">
+  <title>De Cero a Ingresos con IA · Taller presencial gratuito en Bogotá</title>
+  <meta name="description" content="Sábado 5 de septiembre en la Cámara de Comercio de Bogotá. Cómo construir un negocio rentable desde 0 y sin experiencia con inteligencia artificial. 50 cupos.">
 
   <link rel="canonical" href="https://registro.5000millas.com/">
   <link rel="icon" type="image/webp" href="./logo-sello.webp">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://registro.5000millas.com/">
-  <meta property="og:title" content="IA: De Cero a Ingresos · Evento presencial gratuito en Bogotá">
-  <meta property="og:description" content="Sábado 5 de septiembre. Cámara de Comercio de Bogotá. Un taller para empezar en cero y salir con tu plan de negocio con IA definido.">
+  <meta property="og:title" content="De Cero a Ingresos con IA · Bogotá">
+  <meta property="og:description" content="Cómo construir un negocio rentable desde 0 y sin experiencia con inteligencia artificial. Taller presencial gratuito. 5 de septiembre. 50 cupos.">
   <meta property="og:image" content="https://registro.5000millas.com/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="es_CO">
   <meta property="og:site_name" content="5.000 Millas">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IA: De Cero a Ingresos · Bogotá">
+  <meta name="twitter:title" content="De Cero a Ingresos con IA · Bogotá">
   <meta name="twitter:description" content="Taller presencial gratuito. 5 de septiembre. 50 cupos.">
   <meta name="twitter:image" content="https://registro.5000millas.com/og.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="./retrato-hero.webp" imagesrcset="./retrato-hero-mobile.webp 720w, ./retrato-hero.webp 1200w" imagesizes="(max-width: 860px) 100vw, 50vw">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "IA: De Cero a Ingresos",
-    "description": "Taller presencial gratuito para convertir la Inteligencia Artificial en tu primera fuente de ingresos. Sales con tu plan de negocio empezado.",
+    "name": "De Cero a Ingresos con IA",
+    "description": "Taller presencial gratuito. Cómo construir un negocio rentable desde 0 y sin experiencia con inteligencia artificial.",
     "startDate": "2026-09-05T08:00:00-05:00",
     "endDate": "2026-09-05T12:00:00-05:00",
     "eventStatus": "https://schema.org/EventScheduled",
@@ -58,213 +59,385 @@
       "price": "0",
       "priceCurrency": "COP",
       "availability": "https://schema.org/LimitedAvailability",
-      "url": "https://5000millas.com/registro-evento-bogota"
+      "url": "https://registro.5000millas.com/"
     }
   }
   </script>
 
   <style>
     :root{
-      --crema:#F5F1E8;
-      --crema-2:#FBF8F1;
-      --blanco:#FFFFFF;
-      --carbon:#1A1A1A;
-      --carbon-suave:#3A3A38;
-      --tinta:#5A5651;
-      --oro:#8B7355;
-      --oro-oscuro:#6E5B44;
-      --linea:rgba(139,115,85,.20);
-      --linea-fina:rgba(26,26,26,.08);
+      /* Muestreados de referencia-poster.png */
+      --pergamino:      #E0D7CC;  /* centro claro */
+      --pergamino-2:    #DCD3C9;  /* medio */
+      --pergamino-3:    #C8B9A3;  /* borde cálido */
+      --sepia:          #A08D77;  /* esquina superior */
+      --sepia-oscuro:   #8A7862;  /* burnt edge */
+      --carbon:         #1A1A1A;
+      --carbon-2:       #2A2825;
+      --tinta:          #4A4238;
+      --gris-suave:     #6E655A;
+      --oro:            #8B6F47;  /* oro real del recuadro GRATUITO (#7E6130) subido en luminancia */
+      --oro-claro:      #B18F5F;
+      --oro-oscuro:     #6E5535;
+      --crema:          #F0E7D6;  /* texto sobre oro */
+      --cuaderno:       #EFE6D4;
+      --linea-oro:      rgba(139,111,71,.32);
+      --linea-fina:     rgba(26,26,26,.10);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
     body{
       margin:0;
-      background:var(--crema);
       color:var(--carbon);
       font-family:'Outfit', system-ui, -apple-system, sans-serif;
       font-weight:400;
       line-height:1.55;
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
+      /* PERGAMINO — reconstruido con CSS puro con los colores muestreados */
+      background-color: var(--pergamino);
+      background-image:
+        radial-gradient(ellipse 120% 90% at 55% 45%,
+          #E5DCCF 0%,
+          #E0D7CC 30%,
+          #D6C9B6 60%,
+          #B49F86 92%,
+          #907E68 100%);
+      background-attachment: fixed;
+      min-height:100vh;
     }
-    h1,h2,h3,.serif{ font-family:'Cormorant Garamond', Georgia, serif; font-weight:500; letter-spacing:-.01em; }
+    /* Grano de papel muy sutil (SVG turbulence) */
+    body::before{
+      content:'';
+      position:fixed; inset:0;
+      pointer-events:none;
+      z-index:0;
+      opacity:.35;
+      mix-blend-mode:multiply;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='7'/><feColorMatrix values='0 0 0 0 0.36  0 0 0 0 0.30  0 0 0 0 0.22  0 0 0 0.10 0'/></filter><rect width='320' height='320' filter='url(%23n)'/></svg>");
+    }
+    /* Viñeta suave en esquinas */
+    body::after{
+      content:'';
+      position:fixed; inset:0;
+      pointer-events:none;
+      z-index:0;
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, transparent 55%, rgba(90,70,50,.14) 88%, rgba(60,45,30,.28) 100%);
+    }
+    main, header, footer, section{ position:relative; z-index:1; }
+
+    h1,h2,h3,.serif{ font-family:'Cormorant Garamond', Georgia, serif; font-weight:500; letter-spacing:-.005em; }
     a{color:inherit}
     img{max-width:100%; display:block; height:auto}
-    .wrap{max-width:960px; margin:0 auto; padding:0 24px}
-    .wrap-narrow{max-width:720px; margin:0 auto; padding:0 24px}
 
-    /* --- HERO --- */
+    .wrap{max-width:1120px; margin:0 auto; padding:0 32px}
+    .wrap-narrow{max-width:760px; margin:0 auto; padding:0 32px}
+
+    /* ========= HERO ========= */
     .hero{
+      display:grid;
+      grid-template-columns: minmax(0, 46%) minmax(0, 54%);
+      align-items:stretch;
       min-height:100vh;
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      padding:56px 24px 40px;
-      text-align:center;
+      overflow:hidden;
     }
-    .hero .sello{ width:112px; height:112px; margin:0 auto 24px; object-fit:contain; display:block; }
+    .hero-portrait{
+      position:relative;
+      align-self:stretch;
+      margin-left:-2vw; /* bleed a la izquierda */
+    }
+    .hero-portrait img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position: 60% top;
+      /* Fundido con el pergamino: derecha e inferior a transparente */
+      -webkit-mask-image:
+        linear-gradient(to right, #000 55%, transparent 100%),
+        linear-gradient(to bottom, #000 78%, transparent 100%);
+      mask-image:
+        linear-gradient(to right, #000 55%, transparent 100%),
+        linear-gradient(to bottom, #000 78%, transparent 100%);
+      -webkit-mask-composite: source-in;
+      mask-composite: intersect;
+    }
+
+    .hero-content{
+      display:flex; flex-direction:column; justify-content:center;
+      padding: 88px 56px 88px 24px;
+      max-width: 620px;
+    }
     .eyebrow{
+      display:flex; flex-direction:column; align-items:flex-start; gap:10px;
       font-family:'Outfit', sans-serif;
       font-weight:500;
-      font-size:11px;
-      letter-spacing:.28em;
+      font-size:12px;
+      letter-spacing:.34em;
       text-transform:uppercase;
-      color:var(--oro);
+      color:var(--carbon);
+      margin:0 0 30px;
+    }
+    .eyebrow .gratuito{
+      display:inline-block;
+      padding:9px 18px;
+      background:var(--oro);
+      color:var(--crema);
+      letter-spacing:.36em;
+      font-weight:500;
+      font-size:12px;
+      border-radius:1px;
+    }
+
+    .titular{
+      font-family:'Cormorant Garamond', serif;
+      font-weight:500;
+      text-transform:uppercase;
+      font-size: clamp(48px, 6.4vw, 82px);
+      line-height:1.02;
+      letter-spacing:-.005em;
+      color:var(--carbon);
       margin:0 0 22px;
     }
-    .hero h1{
-      font-size:clamp(42px, 7.2vw, 84px);
-      line-height:1.02;
-      margin:0 0 22px;
-      color:var(--carbon);
+    .titular .oro{ color:var(--oro); }
+    .titular span{ display:block; }
+
+    .divisor{
+      display:flex; align-items:center; gap:10px;
+      margin: 6px 0 20px;
+    }
+    .divisor .h{
+      flex:0 0 88px;
+      height:1px;
+      background:var(--oro);
+      opacity:.85;
+    }
+    .divisor .diamond{
+      width:8px; height:8px; transform:rotate(45deg);
+      background:var(--oro);
+    }
+
+    .promesa{
+      font-family:'Cormorant Garamond', serif;
+      font-weight:400;
+      font-size: clamp(20px, 2.1vw, 26px);
+      line-height:1.45;
+      color:var(--carbon-2);
+      max-width:520px;
+      margin:0 0 44px;
+    }
+    .promesa .oro{ color:var(--oro); font-weight:600; letter-spacing:.02em; text-transform:uppercase; font-size:.92em; }
+
+    /* Bloque cuaderno */
+    .cuaderno-bloque{
+      display:grid;
+      grid-template-columns: minmax(180px, 220px) minmax(240px, 1fr);
+      gap:36px;
+      align-items:center;
+    }
+    .cuaderno-cta{
+      display:flex; flex-direction:column; gap:14px;
+    }
+    .cuaderno-cta .icon{
+      width:38px; height:38px; color:var(--oro);
+    }
+    .cuaderno-cta .label{
+      font-family:'Outfit', sans-serif;
+      font-size:11px; letter-spacing:.30em; text-transform:uppercase;
+      color:var(--gris-suave);
       font-weight:500;
     }
-    .hero h1 em{ font-style:italic; color:var(--oro); font-weight:500; }
-    .lead{
-      font-size:clamp(17px, 2.1vw, 20px);
-      color:var(--carbon-suave);
-      max-width:640px; margin:0 auto 18px;
-      font-weight:300;
+    .cuaderno-cta .reclama{
+      font-family:'Cormorant Garamond', serif;
+      font-weight:500;
+      font-size: clamp(20px, 2.2vw, 26px);
+      line-height:1.15;
+      text-transform:uppercase;
+      color:var(--oro);
+      letter-spacing:.02em;
+      margin:0;
     }
-    .reaseguro{
-      font-size:14px; color:var(--tinta);
-      max-width:520px; margin:0 auto 36px;
-      font-weight:400;
-      display:inline-block;
-    }
-    .cta{
+    .cuaderno-cta .cta-btn{
+      align-self:flex-start;
       display:inline-flex; align-items:center; gap:12px;
-      background:var(--oro); color:var(--crema);
-      font-family:'Outfit',sans-serif; font-weight:500; font-size:15px;
-      letter-spacing:.04em;
-      padding:18px 34px;
-      border:none; border-radius:4px;
+      background:var(--carbon);
+      color:var(--crema);
+      font-family:'Outfit',sans-serif; font-weight:500; font-size:14px;
+      letter-spacing:.14em; text-transform:uppercase;
+      padding:16px 28px;
+      border:none; border-radius:2px;
       cursor:pointer;
       text-decoration:none;
-      transition:background .25s ease, transform .25s ease;
-      box-shadow:0 1px 0 rgba(0,0,0,.02);
+      margin-top:6px;
+      transition: background .25s ease, transform .25s ease;
     }
-    .cta:hover{ background:var(--oro-oscuro); transform:translateY(-1px); }
-    .cta:focus-visible{ outline:2px solid var(--carbon); outline-offset:3px }
-    .cta .arrow{ transition:transform .25s ease }
-    .cta:hover .arrow{ transform:translateX(4px) }
-    .microcopy{
-      display:block; margin-top:16px;
-      font-size:13px; color:var(--tinta); font-weight:400;
+    .cuaderno-cta .cta-btn:hover{ background:var(--oro); transform:translateY(-1px); }
+    .cuaderno-cta .cta-btn:focus-visible{ outline:2px solid var(--oro); outline-offset:3px; }
+    .cuaderno-cta .cta-btn .arrow{ transition:transform .25s ease; }
+    .cuaderno-cta .cta-btn:hover .arrow{ transform:translateX(4px); }
+
+    .cuaderno-img{
+      position:relative;
+      filter: drop-shadow(-14px 18px 26px rgba(60,45,30,.22)) drop-shadow(0 2px 4px rgba(60,45,30,.14));
+    }
+    .cuaderno-img img{
+      width:100%; height:auto;
+      /* Fundido inferior contra pergamino, muy suave */
+      -webkit-mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
     }
 
-    /* --- BARRA DATOS EVENTO --- */
+    /* ========= BARRA DE DATOS ========= */
     .datos{
-      background:var(--blanco);
-      border-top:1px solid var(--linea-fina);
-      border-bottom:1px solid var(--linea-fina);
-      padding:26px 24px;
+      border-top:1px solid var(--linea-oro);
+      border-bottom:1px solid var(--linea-oro);
+      background: rgba(240,231,214,.35);
+      padding:22px 24px;
     }
-    .datos-grid{
-      max-width:960px; margin:0 auto;
-      display:flex; gap:14px; align-items:center; justify-content:center;
-      flex-wrap:wrap;
-      color:var(--carbon-suave);
-      font-size:14px;
-      font-weight:400;
+    .datos-inner{
+      max-width:1120px; margin:0 auto;
+      display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap;
+      font-family:'Outfit', sans-serif;
+      font-size:13.5px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--carbon-2);
     }
-    .datos-grid .sep{ color:var(--oro); opacity:.7; }
+    .datos-inner .sep{
+      color:var(--oro); font-size:10px;
+    }
 
-    /* --- SECCIONES --- */
-    section{ padding:88px 0; }
-    section.tight{ padding:64px 0; }
-    .kicker{
+    /* ========= DESCUBRIMIENTOS ========= */
+    section{ padding: 96px 0; }
+    .descubrimientos .kicker{
       font-family:'Outfit',sans-serif;
-      font-size:11px; letter-spacing:.28em; text-transform:uppercase;
-      color:var(--oro); margin:0 0 18px; font-weight:500;
+      font-size:11px; letter-spacing:.34em; text-transform:uppercase;
+      color:var(--oro); font-weight:500;
+      margin:0 0 16px;
     }
-    h2{
-      font-size:clamp(30px, 4.4vw, 46px);
-      line-height:1.15; margin:0 0 22px;
+    .descubrimientos h2{
+      font-family:'Cormorant Garamond', serif;
+      font-weight:500;
+      font-size: clamp(34px, 4.4vw, 52px);
+      line-height:1.1;
+      margin:0 0 40px;
+      color:var(--carbon);
     }
-    .prose{
-      font-size:clamp(16px, 1.9vw, 19px);
-      color:var(--carbon-suave); line-height:1.7;
-      font-weight:300;
-    }
-    .prose p + p{ margin-top:1.1em }
-
-    /* --- DESCUBRIMIENTOS --- */
-    .descubrimientos h2{ margin-bottom:0; }
     .descubrimientos ol{
-      list-style:none; padding:0; margin:32px 0 0;
-      display:flex; flex-direction:column; gap:0;
+      list-style:none; padding:0; margin:0;
+      display:flex; flex-direction:column;
     }
     .descubrimientos li{
-      display:flex; gap:24px; align-items:baseline;
-      padding:28px 0;
-      border-top:1px solid var(--linea-fina);
-      font-size:clamp(17px, 2vw, 21px);
+      display:grid;
+      grid-template-columns: 64px 1fr;
+      gap:24px;
+      align-items:baseline;
+      padding:26px 0;
+      border-top:1px solid var(--linea-oro);
+      font-family:'Cormorant Garamond', serif;
+      font-size: clamp(18px, 1.9vw, 22px);
+      line-height:1.45;
       color:var(--carbon);
-      font-weight:300;
-      line-height:1.5;
+      font-weight:400;
     }
-    .descubrimientos li:last-child{ border-bottom:1px solid var(--linea-fina); }
+    .descubrimientos li:last-child{ border-bottom:1px solid var(--linea-oro); }
     .num{
       font-family:'Cormorant Garamond', serif;
-      font-size:clamp(28px, 3.8vw, 42px);
-      color:var(--oro); font-weight:500;
-      min-width:44px; flex-shrink:0;
-      line-height:1;
+      font-size: clamp(30px, 3.4vw, 40px);
+      color:var(--oro);
+      font-weight:500;
       font-style:italic;
+      line-height:1;
     }
 
-    /* --- CARLOS --- */
-    .carlos{
-      display:grid; grid-template-columns:340px 1fr; gap:56px; align-items:center;
+    /* ========= AUTOR ========= */
+    .autor{
+      display:grid;
+      grid-template-columns: minmax(0, 40%) minmax(0, 60%);
+      gap:56px;
+      align-items:center;
     }
-    .carlos .foto{
-      background:var(--carbon);
-      border-radius:2px;
-      overflow:hidden;
+    .autor-foto{
+      position:relative;
+      max-width:300px;
+    }
+    .autor-foto img{
+      width:100%;
       aspect-ratio: 4/5;
+      object-fit:cover;
+      -webkit-mask-image: radial-gradient(ellipse 92% 96% at 50% 45%, #000 62%, transparent 100%);
+      mask-image: radial-gradient(ellipse 92% 96% at 50% 45%, #000 62%, transparent 100%);
+      filter: grayscale(30%) contrast(1.02);
     }
-    .carlos .foto img{ width:100%; height:100%; object-fit:cover; }
-    .carlos h2{ margin-top:0 }
-    .carlos .nombre{
+    .autor .nombre{
       font-family:'Cormorant Garamond', serif;
-      font-size:32px; color:var(--carbon); font-weight:500;
-      margin:0 0 22px;
+      font-size:32px; font-weight:500;
+      color:var(--carbon); margin:0 0 6px;
     }
-    .carlos .bio{ color:var(--carbon-suave); font-weight:300; font-size:17px; line-height:1.7; margin:0 0 16px; }
-    .carlos .bio:last-child{ margin-bottom:0; }
+    .autor .rol{
+      font-family:'Outfit',sans-serif;
+      font-size:11px; letter-spacing:.30em; text-transform:uppercase;
+      color:var(--oro); font-weight:500;
+      margin:0 0 20px;
+    }
+    .autor .bio{
+      font-family:'Cormorant Garamond', serif;
+      font-size: clamp(18px, 1.8vw, 21px);
+      line-height:1.55;
+      color:var(--carbon-2);
+      margin:0 0 14px;
+      font-weight:400;
+    }
 
-    /* --- FORMULARIO --- */
-    .form-wrap{
-      background:var(--blanco);
-      border-top:1px solid var(--linea-fina);
-      border-bottom:1px solid var(--linea-fina);
+    /* ========= FORMULARIO ========= */
+    .form-section{
+      padding:80px 0 100px;
     }
-    .form-inner{
-      max-width:560px; margin:0 auto; padding:96px 24px;
+    .form-card{
+      max-width:640px; margin:0 auto;
+      padding: 56px 48px 52px;
+      background: rgba(240,231,214,.55);
+      border-top:1px solid var(--linea-oro);
+      border-bottom:1px solid var(--linea-oro);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
     }
-    .form-inner h2{ text-align:center; margin-bottom:14px; }
-    .form-inner .sub{
-      text-align:center; color:var(--carbon-suave);
-      font-size:16px; margin:0 0 40px; font-weight:300;
+    .form-card h2{
+      font-family:'Cormorant Garamond', serif;
+      font-weight:500;
+      font-size: clamp(28px, 3.4vw, 40px);
+      line-height:1.15;
+      text-align:center;
+      margin:0 0 12px;
+      color:var(--carbon);
     }
-    form{ display:flex; flex-direction:column; gap:22px; }
+    .form-card .sub{
+      text-align:center;
+      font-family:'Outfit',sans-serif;
+      font-size:13px; letter-spacing:.24em; text-transform:uppercase;
+      color:var(--oro);
+      font-weight:500;
+      margin:0 0 36px;
+    }
+    form{ display:flex; flex-direction:column; gap:20px; }
     .field{ display:flex; flex-direction:column; gap:8px; }
     label{
-      font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+      font-family:'Outfit',sans-serif;
+      font-size:11px; letter-spacing:.20em; text-transform:uppercase;
       color:var(--carbon); font-weight:500;
     }
-    label .opt{ color:var(--tinta); font-weight:400; text-transform:none; letter-spacing:0; font-size:12px; margin-left:6px; }
+    label .opt{ color:var(--gris-suave); font-weight:400; text-transform:none; letter-spacing:0; font-size:12px; margin-left:6px; }
     input, select{
       font-family:'Outfit', sans-serif; font-size:16px;
-      background:var(--crema-2); color:var(--carbon);
-      border:1px solid var(--linea);
-      border-radius:3px;
+      background: rgba(255,253,247,.9);
+      color:var(--carbon);
+      border:1px solid var(--linea-oro);
+      border-radius:2px;
       padding:14px 16px;
       transition:border-color .2s ease, background .2s ease;
       -webkit-appearance:none; appearance:none;
     }
     select{
-      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='none' stroke='%238B7355' stroke-width='1.5' d='M1 1.5l5 5 5-5'/></svg>");
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='none' stroke='%238B6F47' stroke-width='1.5' d='M1 1.5l5 5 5-5'/></svg>");
       background-repeat:no-repeat;
       background-position:right 16px center;
       padding-right:44px;
@@ -272,30 +445,31 @@
     input:focus, select:focus{
       outline:none;
       border-color:var(--oro);
-      background:var(--blanco);
+      background: rgba(255,255,255,.98);
     }
     .hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; pointer-events:none; }
     .submit{
-      margin-top:12px;
-      background:var(--oro); color:var(--crema);
-      font-family:'Outfit',sans-serif; font-weight:500; font-size:15px;
-      letter-spacing:.06em;
+      margin-top:14px;
+      background:var(--carbon); color:var(--crema);
+      font-family:'Outfit',sans-serif; font-weight:500; font-size:14px;
+      letter-spacing:.20em; text-transform:uppercase;
       padding:18px 28px;
-      border:none; border-radius:3px;
+      border:none; border-radius:2px;
       cursor:pointer;
-      transition:background .2s ease;
+      transition:background .25s ease, transform .25s ease;
     }
-    .submit:hover:not(:disabled){ background:var(--oro-oscuro); }
+    .submit:hover:not(:disabled){ background:var(--oro); transform:translateY(-1px); }
     .submit:disabled{ opacity:.6; cursor:wait; }
-    .submit:focus-visible{ outline:2px solid var(--carbon); outline-offset:3px }
+    .submit:focus-visible{ outline:2px solid var(--oro); outline-offset:3px }
     .form-nota{
-      text-align:center; font-size:12px; color:var(--tinta); margin:0;
+      text-align:center; font-size:12px; color:var(--gris-suave); margin:0;
+      font-family:'Outfit',sans-serif;
     }
     .form-error{
-      background:rgba(180, 60, 40, .06);
-      border:1px solid rgba(180, 60, 40, .25);
-      color:#8A2E1E;
-      padding:14px 16px; border-radius:3px;
+      background:rgba(160, 50, 30, .08);
+      border:1px solid rgba(160, 50, 30, .30);
+      color:#7A2818;
+      padding:14px 16px; border-radius:2px;
       font-size:14px;
       display:none;
     }
@@ -303,28 +477,67 @@
 
     .success{
       display:none;
-      text-align:center; padding:60px 24px;
+      text-align:center; padding:36px 20px;
     }
     .success.show{ display:block; }
     .success .check{
-      width:56px; height:56px; margin:0 auto 24px;
+      width:56px; height:56px; margin:0 auto 22px;
       border:1px solid var(--oro); border-radius:50%;
       display:flex; align-items:center; justify-content:center;
     }
     .success h3{
-      font-size:34px; margin:0 0 12px; color:var(--carbon);
+      font-family:'Cormorant Garamond', serif;
+      font-size:32px; margin:0 0 14px; color:var(--carbon);
       font-weight:500;
     }
-    .success p{ color:var(--carbon-suave); font-size:17px; max-width:440px; margin:0 auto 8px; font-weight:300; line-height:1.6; }
-    .success .kicker{ margin-top:0; margin-bottom:16px; }
+    .success p{
+      font-family:'Cormorant Garamond', serif;
+      color:var(--carbon-2); font-size:19px; max-width:460px; margin:0 auto 8px;
+      font-weight:400; line-height:1.55;
+    }
 
-    /* --- CIERRE --- */
-    .cierre{ text-align:center; padding:120px 24px; }
-    .cierre h2{ margin-bottom:40px; max-width:640px; margin-left:auto; margin-right:auto; }
+    /* ========= CIERRE ========= */
+    .cierre{
+      text-align:center;
+      padding: 100px 24px 110px;
+    }
+    .cierre .cuaderno-mini{
+      width:120px; margin:0 auto 30px;
+      filter: drop-shadow(-8px 12px 20px rgba(60,45,30,.20));
+    }
+    .cierre h2{
+      font-family:'Cormorant Garamond', serif;
+      font-weight:500;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height:1.15;
+      max-width:720px; margin:0 auto 20px;
+      color:var(--carbon);
+    }
+    .cierre h2 .oro{ color:var(--oro); }
+    .cierre .escasez{
+      font-family:'Outfit',sans-serif;
+      font-size:12px; letter-spacing:.30em; text-transform:uppercase;
+      color:var(--gris-suave);
+      margin:0 0 34px;
+    }
+    .cta-oro{
+      display:inline-flex; align-items:center; gap:14px;
+      background:var(--oro); color:var(--crema);
+      font-family:'Outfit',sans-serif; font-weight:500; font-size:14px;
+      letter-spacing:.20em; text-transform:uppercase;
+      padding:18px 34px;
+      border:none; border-radius:2px;
+      cursor:pointer; text-decoration:none;
+      transition:background .25s ease, transform .25s ease;
+    }
+    .cta-oro:hover{ background:var(--oro-oscuro); transform:translateY(-1px); }
+    .cta-oro:focus-visible{ outline:2px solid var(--carbon); outline-offset:3px; }
+    .cta-oro .arrow{ transition:transform .25s ease; }
+    .cta-oro:hover .arrow{ transform:translateX(4px); }
 
-    /* --- FOOTER --- */
+    /* ========= FOOTER ========= */
     footer{
-      border-top:1px solid var(--linea-fina);
+      border-top:1px solid var(--linea-oro);
       padding:56px 24px;
       text-align:center;
     }
@@ -338,11 +551,11 @@
     footer .cita{
       font-family:'Cormorant Garamond', serif;
       font-style:italic; font-size:16px;
-      color:var(--carbon-suave);
-      margin:16px auto 0; max-width:420px;
+      color:var(--carbon-2);
+      margin:16px auto 0; max-width:460px;
     }
 
-    /* --- WHATSAPP FLOATING --- */
+    /* ========= WHATSAPP FLOATING ========= */
     .wa-float{
       position:fixed;
       right:22px; bottom:22px;
@@ -351,15 +564,15 @@
       background:var(--oro);
       color:var(--crema);
       display:flex; align-items:center; justify-content:center;
-      box-shadow:0 8px 24px rgba(26,26,26,.18), 0 2px 6px rgba(26,26,26,.10);
-      transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+      box-shadow:0 8px 24px rgba(60,45,30,.28), 0 2px 6px rgba(60,45,30,.14);
+      transition:transform .25s ease, background .25s ease, box-shadow .25s ease, opacity .25s ease;
       z-index:80;
       text-decoration:none;
     }
     .wa-float:hover{
       background:var(--oro-oscuro);
       transform:translateY(-2px);
-      box-shadow:0 12px 28px rgba(26,26,26,.22), 0 3px 8px rgba(26,26,26,.12);
+      box-shadow:0 12px 28px rgba(60,45,30,.32), 0 3px 8px rgba(60,45,30,.16);
     }
     .wa-float:focus-visible{ outline:2px solid var(--carbon); outline-offset:3px; }
     .wa-float svg{ width:28px; height:28px; display:block; }
@@ -369,62 +582,131 @@
       .wa-float svg{ width:26px; height:26px; }
     }
 
-    /* --- MOTION --- */
-    .reveal{ opacity:0; transform:translateY(14px); transition:opacity .8s ease, transform .8s ease; }
+    /* ========= MOTION ========= */
+    .reveal{ opacity:0; transform:translateY(16px); transition:opacity .9s ease, transform .9s ease; }
     .reveal.in{ opacity:1; transform:none; }
     @media (prefers-reduced-motion: reduce){
       .reveal{ opacity:1; transform:none; transition:none; }
       html{ scroll-behavior:auto; }
     }
 
-    /* --- MOBILE --- */
-    @media (max-width: 720px){
-      .hero{ padding:44px 20px 32px; min-height:auto; }
-      .hero .sello{ width:92px; height:92px; margin-bottom:20px; }
-      section{ padding:64px 0; }
-      section.tight{ padding:48px 0; }
-      .carlos{ grid-template-columns:1fr; gap:32px; text-align:center; }
-      .carlos .foto{ max-width:260px; margin:0 auto; }
-      .datos-grid{ flex-direction:column; gap:8px; text-align:center; }
-      .datos-grid .sep{ display:none; }
-      .form-inner{ padding:64px 20px; }
-      .descubrimientos li{ gap:16px; padding:22px 0; }
-      .num{ min-width:36px; }
-      .cierre{ padding:64px 20px; }
-      .cta{ width:100%; justify-content:center; padding:18px 24px; }
+    /* ========= RESPONSIVE ========= */
+    @media (max-width: 860px){
+      .hero{
+        grid-template-columns: 1fr;
+        min-height:auto;
+      }
+      .hero-portrait{
+        margin:0;
+        height: 62vh; min-height:420px; max-height:640px;
+        width:100%;
+      }
+      .hero-portrait img{
+        object-position: 55% 15%;
+        -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+      }
+      .hero-content{
+        padding: 8px 24px 60px;
+        max-width:100%;
+        margin-top:-40px; /* levantar sobre el fundido */
+      }
+      .titular{ font-size: clamp(44px, 12vw, 64px); }
+      .promesa{ font-size: 20px; margin-bottom:36px; }
+      .cuaderno-bloque{
+        grid-template-columns: 1fr;
+        gap:28px;
+      }
+      .cuaderno-cta{ order:2; align-items:flex-start; }
+      .cuaderno-img{ order:1; max-width:280px; margin:0 auto; }
+      .cuaderno-cta .cta-btn{ align-self:stretch; justify-content:center; }
+      .autor{ grid-template-columns:1fr; gap:32px; text-align:center; }
+      .autor-foto{ max-width:220px; margin:0 auto; }
+      .form-card{ padding:44px 24px; }
+      section{ padding:72px 0; }
+      .descubrimientos li{ grid-template-columns: 48px 1fr; gap:16px; padding:22px 0; }
+      .datos-inner .sep{ display:none; }
+      .datos-inner{ flex-direction:column; gap:6px; font-size:12px; }
+    }
+    @media (max-width: 480px){
+      .hero-content{ padding: 8px 20px 48px; }
+      .form-card{ padding:36px 20px; }
     }
   </style>
 </head>
 <body>
 
-<!-- HERO -->
+<!-- ============ HERO ============ -->
 <header class="hero">
-  <img class="sello" src="./logo-sello.webp" alt="5.000 Millas" width="112" height="112" fetchpriority="high">
-  <p class="eyebrow">Evento presencial · Gratuito · Bogotá</p>
-  <h1>IA: De Cero<br>a <em>Ingresos</em></h1>
-  <p class="lead">Convierte la inteligencia artificial en tu primera fuente de ingresos. Sales con tu plan empezado.</p>
-  <span class="reaseguro">Sin experiencia previa. Empiezas en cero.</span>
-  <div style="margin-top:8px;">
-    <a href="#formulario" class="cta">Reserva tu cupo <span class="arrow" aria-hidden="true">→</span></a>
-    <span class="microcopy">50 cupos. Sin costo.</span>
+  <div class="hero-portrait">
+    <img
+      src="./retrato-hero.webp"
+      srcset="./retrato-hero-mobile.webp 720w, ./retrato-hero.webp 1200w"
+      sizes="(max-width: 860px) 100vw, 46vw"
+      alt="Carlos Medina"
+      fetchpriority="high" width="1200" height="2887">
+  </div>
+
+  <div class="hero-content">
+    <div class="eyebrow">
+      <span>Taller presencial</span>
+      <span class="gratuito">Gratuito</span>
+      <span>En Bogotá</span>
+    </div>
+
+    <h1 class="titular">
+      <span>De cero</span>
+      <span>a <span class="oro">Ingresos</span></span>
+      <span>con IA</span>
+    </h1>
+
+    <div class="divisor" aria-hidden="true">
+      <span class="h"></span>
+      <span class="diamond"></span>
+      <span class="h"></span>
+    </div>
+
+    <p class="promesa">Cómo construir un negocio rentable <span class="oro">desde 0</span> y sin experiencia con inteligencia artificial.</p>
+
+    <div class="cuaderno-bloque">
+      <div class="cuaderno-cta">
+        <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="7" y="4" width="18" height="24" rx="1"/>
+          <path d="M11 4v24M4 8h4M4 14h4M4 20h4M4 26h4"/>
+          <path d="M15 11h6M15 15h6"/>
+        </svg>
+        <p class="label">Regístrate para</p>
+        <p class="reclama">Reclamar tu<br>cuaderno de trabajo</p>
+        <a href="#formulario" class="cta-btn">Reserva tu cupo <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="cuaderno-img">
+        <img
+          src="./cuaderno.webp"
+          srcset="./cuaderno-mobile.webp 600w, ./cuaderno.webp 900w"
+          sizes="(max-width: 860px) 280px, 320px"
+          alt="Cuaderno de trabajo: De Cero a Ingresos con IA"
+          loading="eager" width="900" height="1107">
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- BARRA DATOS EVENTO -->
+<!-- ============ BARRA DE DATOS ============ -->
 <div class="datos">
-  <div class="datos-grid">
+  <div class="datos-inner">
     <span>Sábado 5 de septiembre</span>
-    <span class="sep" aria-hidden="true">·</span>
+    <span class="sep" aria-hidden="true">◆</span>
     <span>8:00 a. m. – 12:00 m.</span>
-    <span class="sep" aria-hidden="true">·</span>
+    <span class="sep" aria-hidden="true">◆</span>
     <span>Cámara de Comercio de Bogotá, Fontibón</span>
   </div>
 </div>
 
-<!-- DESCUBRIMIENTOS -->
+<!-- ============ DESCUBRIMIENTOS ============ -->
 <section class="descubrimientos">
   <div class="wrap reveal">
-    <h2>En esta experiencia descubrirás:</h2>
+    <p class="kicker">En esta experiencia</p>
+    <h2>Descubrirás:</h2>
     <ol>
       <li><span class="num">01</span><span>Cómo usar la IA para encontrar nuevas oportunidades de negocio.</span></li>
       <li><span class="num">02</span><span>Cómo convertir una idea en una posible fuente de ingresos.</span></li>
@@ -435,99 +717,102 @@
   </div>
 </section>
 
-<!-- CARLOS -->
+<!-- ============ AUTOR ============ -->
 <section>
   <div class="wrap reveal">
-    <div class="carlos">
-      <div class="foto">
+    <div class="autor">
+      <div class="autor-foto">
         <img
           src="./carlos-medina.jpg"
           srcset="./carlos-medina-mobile.jpg 500w, ./carlos-medina.jpg 900w"
-          sizes="(max-width: 720px) 260px, 340px"
+          sizes="(max-width: 860px) 220px, 300px"
           alt="Carlos Medina"
-          loading="lazy"
-          width="340" height="425">
+          loading="lazy" width="300" height="375">
       </div>
       <div>
         <p class="nombre">Carlos Medina</p>
-        <p class="bio">Conferencista internacional. Autor de doce libros sobre transformación personal y profesional.</p>
+        <p class="rol">Conferencista internacional</p>
+        <p class="bio">Autor de doce libros sobre transformación personal y profesional.</p>
         <p class="bio">En más de siete años ha acompañado a decenas de personas a transformar su vida y su trabajo. Este taller es gratuito: cree que el punto de partida no debería costarle a nadie.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FORMULARIO -->
-<section id="formulario" class="form-wrap" style="padding:0;">
-  <div class="form-inner reveal">
-    <div id="form-view">
-      <h2>Reserva tu cupo</h2>
-      <p class="sub">50 cupos. Sin costo.</p>
+<!-- ============ FORMULARIO ============ -->
+<section id="formulario" class="form-section">
+  <div class="wrap reveal">
+    <div class="form-card">
+      <div id="form-view">
+        <h2>Reserva tu cupo y reclama tu Cuaderno de Trabajo</h2>
+        <p class="sub">50 cupos · Sin costo</p>
 
-      <form id="registro-form" novalidate autocomplete="on">
-        <div class="form-error" id="form-error" role="alert"></div>
+        <form id="registro-form" novalidate autocomplete="on">
+          <div class="form-error" id="form-error" role="alert"></div>
 
-        <div class="field">
-          <label for="nombre">Nombre y apellido</label>
-          <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Ej. María López" maxlength="120">
-        </div>
+          <div class="field">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Ej. María López" maxlength="120">
+          </div>
 
-        <div class="field">
-          <label for="whatsapp">WhatsApp <span class="opt">(con indicativo, ej. +57)</span></label>
-          <input type="tel" id="whatsapp" name="whatsapp" required autocomplete="tel" inputmode="tel" placeholder="+57 300 000 0000" maxlength="30">
-        </div>
+          <div class="field">
+            <label for="whatsapp">WhatsApp <span class="opt">(con indicativo, ej. +57)</span></label>
+            <input type="tel" id="whatsapp" name="whatsapp" required autocomplete="tel" inputmode="tel" placeholder="+57 300 000 0000" maxlength="30">
+          </div>
 
-        <div class="field">
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" maxlength="160">
-        </div>
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" maxlength="160">
+          </div>
 
-        <div class="field">
-          <label for="ocupacion">¿A qué te dedicas? <span class="opt">opcional</span></label>
-          <select id="ocupacion" name="ocupacion">
-            <option value="">Selecciona una opción</option>
-            <option>Empleado(a)</option>
-            <option>Independiente o profesional</option>
-            <option>Tengo un negocio propio</option>
-            <option>Empresario(a) con equipo</option>
-            <option>Emprendedor(a) comenzando</option>
-            <option>Inversionista</option>
-            <option>Buscando nueva oportunidad</option>
-            <option>Otro</option>
-          </select>
-        </div>
+          <div class="field">
+            <label for="ocupacion">¿A qué te dedicas? <span class="opt">opcional</span></label>
+            <select id="ocupacion" name="ocupacion">
+              <option value="">Selecciona una opción</option>
+              <option>Empleado(a)</option>
+              <option>Independiente o profesional</option>
+              <option>Tengo un negocio propio</option>
+              <option>Empresario(a) con equipo</option>
+              <option>Emprendedor(a) comenzando</option>
+              <option>Inversionista</option>
+              <option>Buscando nueva oportunidad</option>
+              <option>Otro</option>
+            </select>
+          </div>
 
-        <div class="field">
-          <label for="localidad">Localidad o ciudad <span class="opt">opcional</span></label>
-          <input type="text" id="localidad" name="localidad" autocomplete="address-level2" placeholder="Ej. Fontibón, Chapinero, Chía…" maxlength="120">
-        </div>
+          <div class="field">
+            <label for="localidad">Localidad o ciudad <span class="opt">opcional</span></label>
+            <input type="text" id="localidad" name="localidad" autocomplete="address-level2" placeholder="Ej. Fontibón, Chapinero, Chía…" maxlength="120">
+          </div>
 
-        <!-- honeypot anti-spam -->
-        <div class="hp" aria-hidden="true">
-          <label for="empresa_web">No completar</label>
-          <input type="text" id="empresa_web" name="empresa_web" tabindex="-1" autocomplete="off">
-        </div>
+          <!-- honeypot anti-spam -->
+          <div class="hp" aria-hidden="true">
+            <label for="empresa_web">No completar</label>
+            <input type="text" id="empresa_web" name="empresa_web" tabindex="-1" autocomplete="off">
+          </div>
 
-        <button type="submit" class="submit" id="submit-btn">Reserva tu cupo</button>
-        <p class="form-nota">Tus datos se guardan solo para confirmarte el cupo y enviarte los detalles.</p>
-      </form>
-    </div>
-
-    <div id="success-view" class="success" role="status" aria-live="polite">
-      <div class="check">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B7355" stroke-width="1.5" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+          <button type="submit" class="submit" id="submit-btn">Confirmar mi cupo</button>
+          <p class="form-nota">Tus datos se guardan solo para confirmarte el cupo y enviarte los detalles.</p>
+        </form>
       </div>
-      <h3>Tu lugar está reservado.</h3>
-      <p>Te escribiremos por WhatsApp con los detalles del evento.</p>
-      <p style="margin-top:24px; font-size:14px; color:var(--tinta);">Nos vemos el sábado 5 de septiembre.</p>
+
+      <div id="success-view" class="success" role="status" aria-live="polite">
+        <div class="check">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B6F47" stroke-width="1.5" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        </div>
+        <h3>Tu cupo está reservado.</h3>
+        <p>Tu cuaderno de trabajo te espera en el taller. Te escribiremos por WhatsApp con los detalles.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CIERRE -->
+<!-- ============ CIERRE ============ -->
 <section class="cierre reveal">
-  <h2>50 cupos. Cuando se llenen, se cierra el registro.</h2>
-  <a href="#formulario" class="cta">Reserva tu cupo <span class="arrow" aria-hidden="true">→</span></a>
+  <img class="cuaderno-mini" src="./cuaderno-mobile.webp" alt="" loading="lazy">
+  <h2>Reserva tu cupo y reclama tu <span class="oro">Cuaderno de Trabajo.</span></h2>
+  <p class="escasez">50 cupos · Cuando se llenen, se cierra el registro</p>
+  <a href="#formulario" class="cta-oro">Confirmar mi cupo <span class="arrow" aria-hidden="true">→</span></a>
 </section>
 
 <footer>
@@ -584,7 +869,7 @@
     } catch (e) { return { utm_source:null, utm_medium:null, utm_campaign:null }; }
   }
 
-  // Form submit
+  // Form submit — LÓGICA INTACTA (POST directo a Supabase, Prefer: return=minimal)
   (function(){
     const form = document.getElementById('registro-form');
     const btn = document.getElementById('submit-btn');
@@ -627,7 +912,7 @@
       const original = btn.textContent;
       btn.textContent = 'Confirmando…';
 
-      // Honeypot server-side: si vino relleno, fingimos éxito silencioso sin escribir nada.
+      // Honeypot: si vino relleno, fingimos éxito silencioso sin escribir nada.
       if (data.empresa_web && data.empresa_web.trim().length > 0) {
         formView.style.display = 'none';
         successView.classList.add('show');
@@ -675,7 +960,6 @@
         });
 
         const txt = res.status === 201 ? '' : await res.text().catch(() => '');
-        // Duplicado por índice único en lower(correo) → tratamos como éxito (ya inscrito).
         const yaInscrito = res.status === 409 || (res.status === 400 && /duplicate key|23505/i.test(txt));
 
         if (res.status !== 201 && !yaInscrito) {
@@ -683,7 +967,7 @@
           throw new Error('No pudimos guardar tu cupo. Intenta en unos segundos o escríbenos por WhatsApp.');
         }
 
-        // Webhook n8n (fire-and-forget, no bloquea la UX)
+        // Webhook n8n (fire-and-forget)
         if (WEBHOOK_URL) {
           try {
             fetch(WEBHOOK_URL, {
@@ -695,7 +979,6 @@
           } catch(_) {}
         }
 
-        // éxito
         formView.style.display = 'none';
         successView.classList.add('show');
         successView.scrollIntoView({behavior:'smooth', block:'center'});
